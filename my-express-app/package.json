@@ -1,0 +1,26 @@
+{
+  "name": "my-express-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js --watch src/ --watch package.json",
+    "start": "node src/index.js",
+    "make:migration": "knex migrate:make --knexfile src/configs/database.js",
+    "migrate": "knex migrate:latest --knexfile src/configs/database.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "knex": "^3.2.9",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.22.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

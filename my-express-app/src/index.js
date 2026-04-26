@@ -56,6 +56,7 @@ const app = express();
 const port = 3000;
 const postRouter = require ('./routes/post.router');
 
+app.use(express.json());
 app.get('/sapaan', (req,res) => {
   res.send ("hello, world")
 }
@@ -63,7 +64,7 @@ app.get('/sapaan', (req,res) => {
 
 app.use ("/api/posts", postRouter);
 app.listen(port, () => {
-  console.log('Example app listening on port ${port}')
+  console.log(`Example app listening on port ${port}`)
 })
 
 

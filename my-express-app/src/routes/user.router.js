@@ -1,10 +1,11 @@
-const express = require("express");
+// const express = require("express");
 
-const router = express.Router();
+// const router = express.Router();
 
-const { index, byId } = require("../controllers/user.controller");
+// // const { index, byId } = require("../controllers/user.controller");
+// const { index} = require("../controllers/user.controller");
 
-router.get("/", index);
-router.get ("/:id", byId);
+// router.get("/", index);
+// //router.get ("/:id", byId);
 
-module.exports = router;
+// module.exports = router;

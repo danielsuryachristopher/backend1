@@ -25,27 +25,46 @@
 
 
 
-const path = require("path");
+// const path = require("path");
 
-require("dotenv").config({ path: path.join(__dirname, "../.env") });
+// require("dotenv").config({ path: path.join(__dirname, "../.env") });
+
+// const express = require("express");
+// const userRouter = require("./routes/user.router");
+// const postRouter = require("./routes/post.router");
+
+// const app = express();
+
+// app.use(express.urlencoded({ extended: true }));
+// app.use(express.json());
+
+// app.use("/api/users", userRouter);
+// app.use("/api/posts", postRouter);
+
+// app.listen(process.env.SERVER_PORT || 3010, () => {
+//   console.log("Server Running");
+// });
+
+
+
+
+
+
 
 const express = require("express");
-const userRouter = require("./routes/user.router");
-const postRouter = require("./routes/post.router");
-
 const app = express();
+const port = 3000;
+const postRouter = require ('./routes/post.router');
 
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+app.get('/sapaan', (req,res) => {
+  res.send ("hello, world")
+}
+)
 
-app.use("/api/users", userRouter);
-app.use("/api/posts", postRouter);
-
-app.listen(process.env.SERVER_PORT || 3010, () => {
-  console.log("Server Running");
-});
-
-
+app.use ("/api/posts", postRouter);
+app.listen(port, () => {
+  console.log('Example app listening on port ${port}')
+})
 
 
 

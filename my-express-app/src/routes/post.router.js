@@ -2,7 +2,7 @@ const express = require ("express");
 
 const router = express.Router(); // buat endpoint
 
-const { index, getById, deleteIndex, deleteGetById, updateIndex, updateGetById, putIndex, putGetById} = require ("../controllers/post.controller");
+const { index, getById, deleteIndex, deleteGetById, updateIndex, updateGetById, putIndex, putGetById} = require ("../controllers/post.controller.jsxx");
 // const { index } = require ("../controllers/post.controller");
 
 router.get ("/all", index);

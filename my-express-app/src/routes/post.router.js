@@ -2,11 +2,14 @@ const express = require ("express");
 
 const router = express.Router(); // buat endpoint
 
-// const { index, byId } = require ("../controllers/post.controller");
-const { index } = require ("../controllers/post.controller");
+const { index, byId} = require ("../controllers/post.controller");
+// const { index } = require ("../controllers/post.controller");
 
 router.get ("/all", index);
-//router.get ("/:id", byId);
+router.get ("/:id", byId);
+
+
+
 
 
 
